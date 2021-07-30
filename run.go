@@ -232,6 +232,8 @@ type RunCreateOptions struct {
 	// (destroys and then re-creates) the objects specified by the given
 	// resource addresses.
 	ReplaceAddrs []string `jsonapi:"attr,replace-addrs,omitempty"`
+
+	Variables map[string][]byte `jsonapi:"attr,variables,omitempty"`
 }
 
 func (o RunCreateOptions) valid() error {
