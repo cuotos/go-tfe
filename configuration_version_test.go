@@ -181,6 +181,7 @@ func TestConfigurationVersionsReadWithOptions(t *testing.T) {
 
 		assert.NotZero(t, cv.IngressAttributes)
 		assert.NotZero(t, cv.IngressAttributes.CommitURL)
+		assert.NotZero(t, cv.IngressAttributes.CommitSHA)
 	})
 }
 
