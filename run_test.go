@@ -158,6 +158,17 @@ func TestRunsCreate(t *testing.T) {
 		assert.Equal(t, options.ReplaceAddrs, r.ReplaceAddrs)
 		assert.Equal(t, options.TargetAddrs, r.TargetAddrs)
 	})
+
+	//t.Run("with variables", func(t *testing.T) {
+	//	options := RunCreateOptions{
+	//		Message:      String("yo"),
+	//		Workspace:    wTest,
+	//	}
+
+	//	r, err := client.Runs.Create(ctx, options)
+	//	require.NoError(t, err)
+	//	assert.Equal(t, *options.Refresh, r.Refresh)
+	//})
 }
 
 func TestRunsRead_CostEstimate(t *testing.T) {
