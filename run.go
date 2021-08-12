@@ -233,7 +233,7 @@ type RunCreateOptions struct {
 	// resource addresses.
 	ReplaceAddrs []string `jsonapi:"attr,replace-addrs,omitempty"`
 
-	Variables map[string][]byte `jsonapi:"attr,variables,omitempty"`
+	Variables map[string]interface{} `jsonapi:"attr,variables,omitempty"`
 }
 
 func (o RunCreateOptions) valid() error {
