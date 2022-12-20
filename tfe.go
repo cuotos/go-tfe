@@ -169,6 +169,7 @@ type Client struct {
 	Workspaces                 Workspaces
 	WorkspaceRunTasks          WorkspaceRunTasks
 	Projects                   Projects
+	Resources                  Resources
 
 	Meta Meta
 }
@@ -418,6 +419,7 @@ func NewClient(cfg *Config) (*Client, error) {
 	client.VariableSetVariables = &variableSetVariables{client: client}
 	client.WorkspaceRunTasks = &workspaceRunTasks{client: client}
 	client.Workspaces = &workspaces{client: client}
+	client.Resources = &resources{client: client}
 
 	client.Meta = Meta{
 		IPRanges: &ipRanges{client: client},
